@@ -1,0 +1,105 @@
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-05-30 06:37:26
+finder list --class org.distracted.tracker.model.Project
+finder list --class org.distracted.tracker.model.Project --depth 3
+finder list --class org.distracted.tracker.model.Project --depth 2
+finder list --class org.distracted.tracker.model.Task
+finder list --class org.distracted.tracker.model.Task --depth 2
+finder list --class org.distracted.tracker.model.Task --depth 2 --filter Project
+entity --class ~.model.TaskExtendedAttributes
+field string --fieldName comments --sizeMax 1000 --nullRequired 
+field date --fieldName lastUpdateDate --type java.util.Date
+field number --fieldName cost --type java.math.BigDecimal --digitsFraction 2 --digitsInteger 9
+field reference --fieldName task --type org.distracted.tracker.model.TaskExtendedAttributes
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-05-31 08:20:39
+field reference --class org.distracted.tracker.model.Task --fieldName extendedAttributes --type org.distracted.tracker.model.TaskExtendedAttributes --cardinality ONE_TO_ONE 
+// [failed] field reference --class org.distracted.tracker.model.TaskExtendedAttributes --fieldName task --type org.distracted.tracker.model.Task --cardinality ONE_TO_ONE 
+// [failed] field reference --class org.distracted.tracker.model.Task --fieldName extendedAttributes --type org.distracted.tracker.model.TaskExtendedAttributes --cardinality ONE_TO_ONE
+// [failed] field reference --class org.distracted.tracker.model.TaskExtendedAttributes --fieldName task --type org.distracted.tracker.model.Task --cardinality ONE_TO_ONE 
+field reference --class org.distracted.tracker.model.TaskExtendedAttributes --fieldName task --type org.distracted.tracker.model.Task --cardinality ONE_TO_ONE 
+entity --class ~.model.TaskExtendedAttributes --testAutomatically 
+field string --fieldName comments --sizeMax 1000 --nullRequired --class org.distracted.tracker.model.TaskExtendedAttributes
+field date --fieldName lastUpdateDate --type java.util.Date
+
+field number --fieldName cost --type java.math.BigDecimal --digitsFraction 2 --digitsInteger 9
+
+field reference --fieldName task --type org.distracted.tracker.model.TaskExtendedAttributes
+
+entity --class ~.model.TaskExtendedAttributes --testAutomatically
+field string --fieldName comments --sizeMax 1000 --nullRequired 
+field date --fieldName lastUpdateDate --type java.util.Date
+field number --fieldName cost --type java.math.BigDecimal --digitsFraction 2 --digitsInteger 9
+
+
+field reference --class org.distracted.tracker.model.Task --fieldName extendedAttributes --type org.distracted.tracker.model.TaskExtendedAttributes --cardinality ONE_TO_ONE 
+class --class ~.validations.ValidationExercisor
+test mock ~.validations.ValidationExercisorTest
+test integration --entity org.distracted.tracker.validations.ValidationExercisor
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-05-31 10:12:08
+entity --class org.distracted.tracker.model.Person --testAutomatically 
+field string firstName
+field date --fieldName birthDate --type java.util.Date --past true
+field date --fieldName upcomingReviewDate --future true --type java.util.Date
+// Spring Roo 1.1.0.M2 [rev c15a440] log opened at 2010-06-19 21:55:47
+quit
+// Spring Roo 1.1.0.M2 [rev c15a440] log closed at 2010-06-21 23:38:01
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-06-24 05:11:48
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log opened at 2010-06-24 06:24:57
+entity --class ~.model.BaseTag --inheritanceType SINGLE_TABLE  --testAutomatically
+field date --fieldName dateCreated --type java.util.Date --dateFormat SHORT
+field date --fieldName dateDue --type java.util.Date  --dateFormat SHORT
+field string --fieldName description
+entity --class ~.model.SimpleTask --testAutomatically
+// [failed] entity --class ~.model.SimpleTask --testAutomatically --extends ~.model.BaseTag
+entity --class ~.model.BaseTask --inheritanceType SINGLE_TABLE  --testAutomatically
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log opened at 2010-06-24 06:37:31
+entity --class ~.model.BaseTask --inheritanceType TABLE_PER_CLASS  --testAutomatically
+field string --fieldName description --sizeMax 800
+field string --fieldName name --sizeMax 80 --notNull 
+entity --class ~.model.SimpleTask --extends ~.model.BaseTask 
+// [failed] entity --class ~.model.SimpleTask --extends ~.model.BaseTask
+// [failed] test integration --entity ~.model.Simp
+test integration --entity ~.model.SimpleTask
+field number --fieldName priority --type java.lang.Short
+field date --fieldName dateDue --type java.util.Date  --dateFormat SHORT
+field boolean --fieldName completed
+field date --fieldName dateComplete --type java.util.Date --dateFormat SHORT
+entity --class ~.model.CalendarEvent --extends ~.model.BaseTask --testAutomatically
+field date --fieldName dateStart --type java.util.Date --dateFormat SHORT --timeFormat SHORT
+field date --fieldName dateEnd --type java.util.Date --dateFormat SHORT --timeFormat SHORT
+quit
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log closed at 2010-06-24 07:16:12
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log opened at 2010-06-24 07:46:33
+quit
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log closed at 2010-06-24 07:47:56
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log opened at 2010-06-24 07:48:57
+quit
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log closed at 2010-06-24 07:49:17
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log opened at 2010-06-24 10:09:35
+quit
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log closed at 2010-06-24 10:11:27
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log opened at 2010-06-24 10:26:54
+quit
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log closed at 2010-06-24 10:27:34
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log opened at 2010-06-25 09:33:42
+quit
+// Spring Roo 1.1.0.M2 [rev 1677ad0] log closed at 2010-06-25 09:35:41
+// Spring Roo 1.1.0.M2 [rev 1cb1577] log opened at 2010-06-25 09:38:15
+// Spring Roo 1.1.0.M2 [rev f6c1e16] log opened at 2010-06-27 19:21:34
+// Spring Roo 1.1.0.M2 [rev f6c1e16] log opened at 2010-06-27 23:18:23
+persistence setup --provider HIBERNATE --database HYPERSONIC_PERSISTENT 
+// Spring Roo 1.1.0.M2 [rev f6c1e16] log opened at 2010-06-27 23:34:59
+// Spring Roo 1.1.0.M2 [rev f6c1e16] log opened at 2010-06-27 23:36:34
+quit
+// Spring Roo 1.1.0.M2 [rev f6c1e16] log closed at 2010-06-27 23:36:44
+// Spring Roo 1.1.0.M2 [rev f6c1e16] log opened at 2010-06-27 23:36:47
+quit
+// Spring Roo 1.1.0.M2 [rev f6c1e16] log closed at 2010-06-27 23:36:57
+// Spring Roo 1.1.0.M2 [rev 275c8e0] log opened at 2010-06-30 00:13:05
+quit
+// Spring Roo 1.1.0.M2 [rev 275c8e0] log closed at 2010-06-30 00:57:22
+// Spring Roo 1.1.0.M2 [rev 74120ef] log opened at 2010-07-03 13:57:44
+quit
+// Spring Roo 1.1.0.M2 [rev 74120ef] log closed at 2010-07-03 13:58:25
+// Spring Roo 1.1.0.M2 [rev 74120ef] log opened at 2010-07-03 13:59:07
+quit
+// Spring Roo 1.1.0.M2 [rev 74120ef] log closed at 2010-07-04 08:12:57
